@@ -1,22 +1,22 @@
 debian or centos please run
 ```
-curl -fsSL https://github.com/deepbwork/v2board-server/raw/master/install.sh | bash -s websiteurl token nodeid localport license
+curl -fsSL https://github.com/tokumeikoi/aurora/raw/master/install.sh | bash -s websiteurl token nodeid localport license
 ```
 
 docker please run
 ```
-docker run -d --name=v2board-server \
+docker run -d --name=aurora \
 -p 连接端口:连接端口 \
 -p 连接端口:连接端口/udp \
 -e API=API \
 -e TOKEN=TOKEN \
 -e NODE=NODEID \
 -e LICENSE=LICENSE \
-tokumeikoi/v2board-server
+tokumeikoi/aurora
 ```
 
 build
 ```
-https://github.com/deepbwork/v2board-server.git
-docker build ./v2board-server
+https://github.com/tokumeikoi/aurora.git
+docker build ./aurora
 ```
