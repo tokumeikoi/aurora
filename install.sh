@@ -21,7 +21,7 @@ echo '结束进程'
 rm -rf $key
 mkdir $key
 cd $key
-wget https://github.com/tokumeikoi/aurora/raw/master/aurora
+wget https://github.com/tokumeikoi/aurora/raw/latest/aurora
 wget https://github.com/v2ray/v2ray-core/releases/latest/download/v2ray-linux-64.zip
 
 unzip v2ray-linux-64.zip
