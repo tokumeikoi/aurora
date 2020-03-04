@@ -1,3 +1,5 @@
+last update at: 2020.03.05 v1.2
+
 debian or centos please run
 ```
 curl -fsSL https://github.com/tokumeikoi/aurora/raw/master/install.sh | bash -s websiteurl token nodeid localport license
@@ -14,6 +16,9 @@ docker run -d --name=aurora \
 -e LICENSE=LICENSE \
 tokumeikoi/aurora
 ```
+
+old version  
+https://github.com/tokumeikoi/aurora/releases
 
 build
 ```
