@@ -1,13 +1,20 @@
-last update at: 2020.03.08 v1.2.2
+Aurora is a v2ray server that only supports the v2board panel.
+This project is a paid project to make us serve you better.
 
-debian or centos please run
+Buy it telegram @v2aurora
+
+Last update at: *** 2020.03.08 v1.2.2 ***
+
+## Use
+
+Debian or centos please run
 ```
 curl -fsSL https://github.com/tokumeikoi/aurora/raw/master/install.sh | bash -s API TOKEN NODEID LOCALPORT LICENSE
 ```
 
 docker please run
 ```
-docker run -d --name=aurora \
+Docker run -d --name=aurora \
 -p 连接端口:连接端口 \
 -p 连接端口:连接端口/udp \
 -e API=API \
@@ -26,13 +33,11 @@ tokumeikoi/aurora
 |LICENSE|授权码|
 |LOCALPORT|本地端口，用于与V2ray通讯使用，如果本地有部署多个请不要冲突，也不要与连接端口或服务端口冲突|
 
-old version  
+## Old version  
 https://github.com/tokumeikoi/aurora/releases
 
-build
+## Build
 ```
 https://github.com/tokumeikoi/aurora.git
 docker build ./aurora
 ```
-
-buy it telegram @v2aurora
