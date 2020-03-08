@@ -17,7 +17,7 @@ docker run -d --name=aurora \
 tokumeikoi/aurora
 ```
 
-|参数名|描述|
+|Params|Description|
 |:---|:---|
 |连接端口|同V2board连接端口|
 |API|https://xxxx.com|
