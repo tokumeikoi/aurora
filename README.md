@@ -2,7 +2,7 @@ last update at: 2020.03.08 v1.2.2
 
 debian or centos please run
 ```
-curl -fsSL https://github.com/tokumeikoi/aurora/raw/master/install.sh | bash -s api token nodeid localport license
+curl -fsSL https://github.com/tokumeikoi/aurora/raw/master/install.sh | bash -s API TOKEN NODEID LOCALPORT LICENSE
 ```
 
 docker please run
@@ -24,6 +24,7 @@ tokumeikoi/aurora
 |TOKEN|通讯密钥|
 |NODEID|节点ID|
 |LICENSE|授权码|
+|LOCALPORT|本地端口，用于与V2ray通讯使用，如果本地有部署多个请不要冲突，也不要与连接端口或服务端口冲突|
 
 old version  
 https://github.com/tokumeikoi/aurora/releases
