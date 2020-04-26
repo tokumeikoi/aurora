@@ -14,6 +14,12 @@ key=$2
 nodeId=$3
 localPort=$4
 license=$5
+if $6
+    then
+    syncInterval=$6
+else
+    syncInterval=60
+fi
 
 kill -9 $(ps -ef | grep $key | grep -v grep | grep -v bash | awk '{print $2}') 1 > /dev/null
 kill -9 $(ps -ef | grep defunct | grep -v grep | awk '{print $2}') 1 > /dev/null
@@ -26,7 +32,7 @@ wget https://github.com/v2ray/v2ray-core/releases/latest/download/v2ray-linux-64
 
 unzip v2ray-linux-64.zip
 chmod 755 *
-nohup `pwd`/aurora -api=$api -token=$key -node=$nodeId -localport=$localPort -license=$license > aurora.log 2>&1 &
+nohup `pwd`/aurora -api=$api -token=$key -node=$nodeId -localport=$localPort -license=$license -syncInterval=$syncInterval > aurora.log 2>&1 &
 echo '部署完成'
 sleep 3
 cat aurora.log
