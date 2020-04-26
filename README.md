@@ -23,17 +23,18 @@ Docker run -d --name=aurora \
 -e NODE=NODEID \
 -e LICENSE=LICENSE \
 tokumeikoi/aurora
+
+# 连接端口同V2board连接端口
 ```
 
 |Params|Description|Require|
 |:---|:---|:---|
-|连接端口|同V2board连接端口||
-|API|https://xxxx.com|必须|
-|TOKEN|通讯密钥|必须|
-|NODEID|节点ID|必须|
-|LICENSE|授权码|必须|
-|LOCALPORT|本地端口，用于与V2ray通讯使用，如果本地有部署多个请不要冲突，也不要与连接端口或服务端口冲突|必须|
-|SYNCINTERVAL|数据提交频率||
+|API|https://xxxx.com|Yes|
+|TOKEN|通讯密钥|Yes|
+|NODEID|节点ID|Yes|
+|LICENSE|授权码|Yes|
+|LOCALPORT|本地端口，用于与V2ray通讯使用，如果本地有部署多个请不要冲突，也不要与连接端口或服务端口冲突|Yes|
+|SYNCINTERVAL|数据提交频率|No|
 
 ## Old version  
 https://github.com/tokumeikoi/aurora/releases
