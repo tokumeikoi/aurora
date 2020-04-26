@@ -34,7 +34,7 @@ tokumeikoi/aurora
 |NODEID|节点ID|Yes|
 |LICENSE|授权码|Yes|
 |LOCALPORT|本地端口，用于与V2ray通讯使用，如果本地有部署多个请不要冲突，也不要与连接端口或服务端口冲突|Yes|
-|SYNCINTERVAL|数据提交频率|No|
+|SYNCINTERVAL|数据提交频率，默认60秒/次|No|
 
 ## Old version  
 https://github.com/tokumeikoi/aurora/releases
