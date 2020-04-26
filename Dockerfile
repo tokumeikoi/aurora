@@ -8,4 +8,4 @@ RUN cd /aurora \
     && rm -rf v2ray-linux-64.zip \
     && chmod +x /aurora/*
 
-ENTRYPOINT /aurora/aurora -api="$API" -token="$TOKEN" -node="$NODE" -localport="23333" -license="$LICENSE"
+ENTRYPOINT /aurora/aurora -api="$API" -token="$TOKEN" -node="$NODE" -localport="23333" -license="$LICENSE" -syncInterval="$SYNCINTERVAL"
