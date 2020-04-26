@@ -22,6 +22,7 @@ Docker run -d --name=aurora \
 -e TOKEN=TOKEN \
 -e NODE=NODEID \
 -e LICENSE=LICENSE \
+-e SYNCINTERVAL=60 \
 tokumeikoi/aurora
 
 # 连接端口同V2board连接端口
