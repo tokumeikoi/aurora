@@ -4,7 +4,7 @@ This project is a paid project to make us serve you better.
 
 Buy it telegram @v2aurora
 
-Last update at: **2020.04.26 v1.2.3**
+Last update at: **2020.04.27 v1.2.4**
 
 ## Use
 
