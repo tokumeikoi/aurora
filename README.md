@@ -1,47 +1,40 @@
-Aurora is a v2ray server that only supports the v2board panel.
+<img src='https://github.com/tokumeikoi/tidalab-trojan/raw/master/img/tidalab.png' width='100px' align='center'>
 
-This project is a paid project to make us serve you better.
+## 快速使用
 
-Buy it telegram @v2aurora
-
-Last update at: **2020.04.27 v1.2.4**
-
-## Use
-
-Debian or centos please run
+1.在系统中运行
+```bash
+# 请将命令中的API替换成V2board面板地址如：https://v2board.com
+# 请将命令中的TOKEN替换成V2Board后台系统配置->服务端->通讯密钥
+# 请将命令中的NODEID替换成V2Board后台V2ray中添加的节点ID
+# 请将命令中的LOCALPORT替换成1-65535任意端口不允许与其他端口冲突，非连接端口和服务端口
+# 请将命令中的LICENSE替换成授权字符
+curl -fsSL https://github.com/tokumeikoi/aurora/raw/master/install.sh | bash -s API TOKEN NODEID LOCALPORT LICENSE 60
 ```
-curl -fsSL https://github.com/tokumeikoi/aurora/raw/master/install.sh | bash -s API TOKEN NODEID LOCALPORT LICENSE SYNCINTERVAL
-```
 
-docker please run
-```
+2.在Docker运行
+```bash
+# 请将命令中的服务端口替换成V2board节点配置中服务端口
+# 请将命令中的API替换成V2board面板地址如：https://v2board.com
+# 请将命令中的TOKEN替换成V2Board后台系统配置->服务端->通讯密钥
+# 请将命令中的NODEID替换成V2Board后台V2ray中添加的节点ID
+# 请将命令中的LICENSE替换成授权字符
 Docker run -d --name=aurora \
--p 连接端口:连接端口 \
--p 连接端口:连接端口/udp \
+-p 服务端口:服务端口 \
+-p 服务端口:服务端口/udp \
 -e API=API \
 -e TOKEN=TOKEN \
 -e NODE=NODEID \
 -e LICENSE=LICENSE \
 -e SYNCINTERVAL=60 \
 tokumeikoi/aurora
-
-# 连接端口同V2board连接端口
 ```
 
-|Params|Description|Require|
-|:---|:---|:---|
-|API|https://xxxx.com|Yes|
-|TOKEN|通讯密钥|Yes|
-|NODEID|节点ID|Yes|
-|LICENSE|授权码|Yes|
-|LOCALPORT|本地端口，用于与V2ray通讯使用，如果本地有部署多个请不要冲突，也不要与连接端口或服务端口冲突|Yes|
-|SYNCINTERVAL|数据提交频率，默认60秒/次|No|
+## 申请TLS证书
 
-## Old version  
-https://github.com/tokumeikoi/aurora/releases
+```bash
+# 请将命令中的domain.com替换成节点域名
+curl -fsSL https://github.com/tokumeikoi/tidalab-trojan/raw/master/sign.sh | bash -s domain.com
+```
 
-## Build
-```
-https://github.com/tokumeikoi/aurora.git
-docker build ./aurora
-```
+申请完成后证书将会保存至/home/v2ray.crt /home/v2ray.key
