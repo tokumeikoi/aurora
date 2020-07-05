@@ -38,7 +38,7 @@ tokumeikoi/aurora
 
 ```bash
 # 请将命令中的domain.com替换成节点域名
-curl -fsSL https://github.com/tokumeikoi/tidalab-trojan/raw/master/sign.sh | bash -s domain.com
+curl -fsSL https://github.com/tokumeikoi/aurora/raw/master/sign.sh | bash -s domain.com
 ```
 
-2.申请完成后证书将会保存至/home/v2ray.crt /home/v2ray.key
+2.申请完成后证书将会保存至/root/.cert/server.crt /root/.cert/server.key
