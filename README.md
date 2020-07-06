@@ -4,6 +4,8 @@
 
 1.在系统中运行
 ```bash
+# 使用必读
+# 使用前请在V2Board添加好节点
 # 请将命令中的API替换成V2board面板地址如：https://v2board.com
 # 请将命令中的TOKEN替换成V2Board后台系统配置->服务端->通讯密钥
 # 请将命令中的NODEID替换成V2Board后台V2ray中添加的节点ID
@@ -15,6 +17,8 @@ curl -fsSL https://github.com/tokumeikoi/aurora/raw/master/install.sh | bash -s 
 
 2.在Docker运行
 ```bash
+# 使用必读
+# 使用前请在V2Board添加好节点
 # 请将命令中的服务端口替换成V2board节点配置中服务端口
 # 请将命令中的API替换成V2board面板地址如：https://v2board.com
 # 请将命令中的TOKEN替换成V2Board后台系统配置->服务端->通讯密钥
@@ -37,6 +41,8 @@ tokumeikoi/aurora
 1.首先将节点域名解析到节点服务器，并且可以ping通  
 
 ```bash
+# 使用必读
+# 使用前请将节点域名解析到节点，并且可以ping通
 # 请将命令中的domain.com替换成节点域名
 curl -fsSL https://github.com/tokumeikoi/aurora/raw/master/sign.sh | bash -s domain.com
 ```
