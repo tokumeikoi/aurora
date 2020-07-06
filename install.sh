@@ -14,6 +14,7 @@ key=$2
 nodeId=$3
 localPort=$4
 license=$5
+folder=$key-v2ray
 if [[ "$6" -ne "" ]]
     then
     syncInterval=$6
@@ -21,12 +22,12 @@ else
     syncInterval=60
 fi
 
-kill -9 $(ps -ef | grep $key | grep -v grep | grep -v bash | awk '{print $2}') 1 > /dev/null
+kill -9 $(ps -ef | grep ${folder} | grep -v grep | grep -v bash | awk '{print $2}') 1 > /dev/null
 kill -9 $(ps -ef | grep defunct | grep -v grep | awk '{print $2}') 1 > /dev/null
 echo '结束进程'
-rm -rf $key
-mkdir $key
-cd $key
+rm -rf $folder
+mkdir $folder
+cd $folder
 wget https://github.com/tokumeikoi/aurora/releases/latest/download/aurora
 wget https://github.com/v2ray/v2ray-core/releases/latest/download/v2ray-linux-64.zip
 
