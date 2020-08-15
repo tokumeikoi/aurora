@@ -4,7 +4,6 @@ echo '正在安装依赖'
 
 if cat /etc/os-release | grep "centos" > /dev/null
     then
-    yum update > /dev/null
     yum install tar wget -y > /dev/null
 else
     apt update > /dev/null
