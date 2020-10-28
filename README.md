@@ -25,7 +25,7 @@ curl -fsSL https://github.com/tokumeikoi/aurora/raw/master/install.sh | bash -s 
 # 请将命令中的NODEID替换成V2Board后台V2ray中添加的节点ID
 # 请将命令中的LICENSE替换成授权字符
 
-Docker run -d --name=aurora \
+docker run -d --name=aurora \
 -p 服务端口:服务端口 \
 -p 服务端口:服务端口/udp \
 -e API=API \
@@ -33,6 +33,7 @@ Docker run -d --name=aurora \
 -e NODE=NODEID \
 -e LICENSE=LICENSE \
 -e SYNCINTERVAL=60 \
+--restart=always \
 tokumeikoi/aurora
 ```
 
