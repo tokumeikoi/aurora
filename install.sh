@@ -12,7 +12,7 @@ fi
 api=$1
 key=$2
 nodeId=$3
-license=$5
+license=$4
 folder=$key-v2ray
 if [[ "$6" -ne "" ]]
     then
