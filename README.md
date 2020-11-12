@@ -25,14 +25,14 @@ curl -fsSL https://github.com/tokumeikoi/aurora/raw/master/install.sh | bash -s 
 # 请将命令中的LICENSE替换成授权字符
 
 docker run -d --name=aurora \
--p 服务端口:服务端口 \
--p 服务端口:服务端口/udp \
+-v /root/.cert:/root/.cert \
 -e API=API \
 -e TOKEN=TOKEN \
 -e NODE=NODEID \
 -e LICENSE=LICENSE \
 -e SYNCINTERVAL=60 \
 --restart=always \
+--network=host \
 tokumeikoi/aurora
 ```
 
