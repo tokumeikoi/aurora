@@ -18,7 +18,6 @@ curl -fsSL https://github.com/tokumeikoi/aurora/raw/master/install.sh | bash -s 
 ```bash
 # 使用必读
 # 使用前请在V2Board添加好节点
-# 请将命令中的服务端口替换成V2board节点配置中服务端口
 # 请将命令中的API替换成V2board面板地址如：https://v2board.com
 # 请将命令中的TOKEN替换成V2Board后台系统配置->服务端->通讯密钥
 # 请将命令中的NODEID替换成V2Board后台V2ray中添加的节点ID
