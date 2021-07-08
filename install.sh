@@ -12,22 +12,22 @@ else
     echo "soft nofile 51200" >> /etc/security/limits.conf
     echo "hard nofile 51200" >> /etc/security/limits.conf
     (cat <<EOF
-    fs.file-max = 102400
-    net.core.somaxconn = 1048576
-    net.ipv4.tcp_syncookies = 1
-    net.ipv4.tcp_tw_reuse = 1
-    net.ipv4.tcp_timestamps = 1
-    net.ipv4.tcp_fin_timeout = 30
-    net.core.default_qdisc = fq
-    net.ipv4.tcp_congestion_control = bbr
-    net.ipv4.tcp_fastopen = 3
-    net.ipv4.tcp_max_syn_backlog = 1048576
-    net.ipv4.tcp_synack_retries = 1
-    net.ipv4.tcp_orphan_retries = 1
-    net.ipv4.ip_local_port_range = 32768 65535
-    net.ipv4.tcp_mem = 88560 118080 177120
-    net.ipv4.tcp_wmem = 4096 16384 8388608
-    EOF
+fs.file-max = 102400
+net.core.somaxconn = 1048576
+net.ipv4.tcp_syncookies = 1
+net.ipv4.tcp_tw_reuse = 1
+net.ipv4.tcp_timestamps = 1
+net.ipv4.tcp_fin_timeout = 30
+net.core.default_qdisc = fq
+net.ipv4.tcp_congestion_control = bbr
+net.ipv4.tcp_fastopen = 3
+net.ipv4.tcp_max_syn_backlog = 1048576
+net.ipv4.tcp_synack_retries = 1
+net.ipv4.tcp_orphan_retries = 1
+net.ipv4.ip_local_port_range = 32768 65535
+net.ipv4.tcp_mem = 88560 118080 177120
+net.ipv4.tcp_wmem = 4096 16384 8388608
+EOF
     ) > /etc/sysctl.conf
 fi
 
