@@ -11,8 +11,8 @@ fi
 
 echo '环境优化'
 ulimit -n 51200
-echo "soft nofile 51200" >> vi /etc/security/limits.conf
-echo "hard nofile 51200" >> vi /etc/security/limits.conf
+echo "soft nofile 51200" >> /etc/security/limits.conf
+echo "hard nofile 51200" >> /etc/security/limits.conf
 (cat <<EOF
 fs.file-max = 102400
 net.core.somaxconn = 1048576
